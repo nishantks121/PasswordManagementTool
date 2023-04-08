@@ -1,0 +1,29 @@
+  main {
+      max-width: 1000px;
+      color: white;
+      margin: 0 auto;
+      padding: 20px;
+  }
+
+  .banner {
+      background-size: cover;
+      height: 300px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+  }
+
+  .banner h1 {
+      color: #fff;
+      font-size: 48px;
+      text-align: center;
+      text-shadow: 2px 2px #000;
+  }
+
+  .content h2 {
+      margin-top: 40px;
+  }
+
+  .content p {
+      margin-bottom: 20px;
+  }

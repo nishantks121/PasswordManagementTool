@@ -1,0 +1,13 @@
+.ak{
+    background-color: white !important;
+}
+
+button{
+    width: 150px;
+}
+
+button:hover{
+    font-weight: 700;
+   background-color: rgb(80, 223, 54) !important;
+}
+

@@ -1,0 +1,41 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <!-- Required meta tags -->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <!-- Bootstrap CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+
+  <link rel="stylesheet" href="/static/css/style.css">
+  <link rel="stylesheet" href="/static/css/inputbox.css">
+  <link rel="stylesheet" href="/static/css/custom_scroll.css">
+  <link rel="stylesheet" href="/static/css/footer.css">
+  <title>Home page</title>
+</head>
+
+<body class="custom-scroll">
+  {{>navbar data=data}}
+
+  <div class="conatainer formm">
+    <div class="row">
+      <div class="col-4"></div>
+      <div class="col-4">
+        {{>inputbox}}
+      </div>
+      <div class="col-4"></div>
+    </div>
+  </div>
+
+  <div style="background-color: white; margin-top:100px; width:100%; height:2px;"></div>
+  {{>footer}}
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+    crossorigin="anonymous"></script>
+</body>
+
+</html>
