@@ -1,6 +1,6 @@
 const mongoose=require('mongoose')
 
-const Slider=mongoose.Schema({
+const Slider=new mongoose.Schema({
     img:String,
     title:String,
     subtitle:String,

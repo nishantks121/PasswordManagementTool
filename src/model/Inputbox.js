@@ -1,6 +1,6 @@
 const mongoose=require('mongoose')
 
-const Inputbox=mongoose.Schema({
+const Inputbox=new mongoose.Schema({
     username:String,
     password:String
 })

@@ -5,7 +5,10 @@ const productRouter=require('./routes/routes')
 const Navbar=require('./model/Navbar')
 const Inputbox=require('./model/Inputbox')
 const Slider=require('./model/Slider')
+require('dotenv').config();
 const app=express()
+
+const PORT=process.env.PORT || 4500 // getting port value from env file 
 
 // to submit the data //
 app.use(express.json())
@@ -32,7 +35,10 @@ hbs.registerPartials('views/partials')
 
 
 // connection to database
-mongoose.connect('mongodb://localhost:27017/password_management_tool')
+const main=async()=>{
+    await mongoose.connect('mongodb://localhost:27017/password_management_tool').then(()=>console.log("database connected!"))
+}
+main().catch((err)=>console.log(err))
 
 // saving navbar dynamic data to database//
 // const result=new Navbar({
@@ -61,7 +67,7 @@ mongoose.connect('mongodb://localhost:27017/password_management_tool')
 
 
 // Slider data to db - images,title & subtitle, color
-// const result=Slider(
+// const result=new Slider(
 //    {
 //         img:"/static/images/lock1.png",
 //          title:"First slide label",
@@ -83,7 +89,7 @@ mongoose.connect('mongodb://localhost:27017/password_management_tool')
 
 // result.save().then(()=>console.log("slider data in db"))
 
-// server 
-app.listen(process.env.PORT | 3000,()=>{
-    console.log("server started!")
+// server connection
+app.listen(PORT,()=>{
+    console.log("server started at "+PORT)
 })
