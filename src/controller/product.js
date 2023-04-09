@@ -2,8 +2,11 @@ const Navbar =require('../model/Navbar')
 const Inputbox =require('../model/Inputbox')
 const Slider =require('../model/Slider')
 
-const navbarId="643315ff35efd53a212a7633"
-const SliderId="6433177f2ffed307f02ce604"
+// const navbarId="643315ff35efd53a212a7633"   // mongodb atles
+// const SliderId="6433177f2ffed307f02ce604"   // mongodb atles
+
+const navbarId="64272ff9d7883d7665758e70"   // local database
+const SliderId="6432bb47de2786aae1393b7a"   // local database
 
 exports.home=async(req,res)=>{
     const data= await Navbar.findOne({"_id":navbarId})

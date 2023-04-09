@@ -9,8 +9,9 @@ require('dotenv').config();
 const app = express()
 
 const PORT = process.env.PORT || 4500 // getting port value from env file
-const url=`mongodb+srv://nksdevelopers1:${process.env.password}@maincluster1.x0qw3py.mongodb.net/?retryWrites=true&w=majority` 
-// console.log(url)    // mongodb atles connection
+// const url=`mongodb+srv://nksdevelopers1:${process.env.password}@maincluster1.x0qw3py.mongodb.net/?retryWrites=true&w=majority` // mongodb atles connection
+const url=`mongodb://localhost:27017/password_management_tool`
+// console.log(url)    
 
 // to submit the data //
 app.use(express.json())

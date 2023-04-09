@@ -1,25 +1,29 @@
 <div class="container">
 
-<table class="table table-dark table-striped">
-  <thead>
-    <tr>
-      <th scope="col">Sno.</th>
-      <th scope="col">UserName</th>
-      <th scope="col">Password</th>
-    </tr>
-  </thead>
+  <table class="table table-dark table-striped">
+    <thead>
+      <tr>
+        <th scope="col">Sno.</th>
+        <th scope="col">UserName</th>
+        <th scope="col">Password</th>
+        <th scope="col">Operations</th>
+      </tr>
+    </thead>
 
-  <tbody>
-    
-    {{#each tableData}}
-    <tr>
-      <th scope="row">{{inc @index}}</th>
-      <td>{{this.username}}</td>
-      <td>{{this.password}}</td>
-    </tr>
-    {{/each}}
+    <tbody>
 
-  </tbody>
-</table>
+      {{#each tableData}}
+      <tr>
+        <th scope="row">{{inc @index}}</th>
+        <td>{{this.username}}</td>
+        <td>{{this.password}}</td>
+        <td>
+          <img style="height: 20px;" src="{{this.deleteImg}}">
+        </td>
+      </tr>
+      {{/each}}
+
+    </tbody>
+  </table>
 
 </div>
