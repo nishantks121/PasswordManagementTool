@@ -1,10 +1,14 @@
 const mongoose=require('mongoose')
 
 const Slider=new mongoose.Schema({
-    img:String,
-    title:String,
-    subtitle:String,
-    class:String
+    data:[
+        {
+            img:{type:String,required:true},
+            title:{type:String,required:true},
+            subtitle:{type:String,required:true},
+            class:{type:String}
+        }
+    ]
 })
 
 module.exports=mongoose.model('sliders',Slider)

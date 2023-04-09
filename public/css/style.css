@@ -1,5 +1,8 @@
-button:hover{
-    font-weight: 700;
+.button_color:hover{
    background-color: rgb(80, 223, 54) !important;
+}
+
+.bold_hover:hover{
+    font-weight: 600;
 }
 

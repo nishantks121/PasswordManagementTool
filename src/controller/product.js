@@ -12,7 +12,7 @@ exports.home=async(req,res)=>{
 
 exports.password=async(req,res)=>{
     const data= await Navbar.findOne({"_id":"64272ff9d7883d7665758e70"})
-    const slide= await Slider.find({})
+    const slide= await Slider.findOne({"_id":"6432bb47de2786aae1393b7a"})
     const tableData= await Inputbox.find({})
     // console.log(slide)
     res.render("password.hbs",{
@@ -37,17 +37,17 @@ exports.logout=(req,res)=>{
 }
 
 exports.formSubmit=(req,res)=>{
-    console.log("data submited!")
     console.log(req.body)
+    console.log("data submited!")
 
     // save data to db //
   try{
       const result=new Inputbox(req.body)
       result.save()
-      console.log(result)
+    //   console.log(result)
       res.redirect('/password')
-  }catch(e){
-    console.log(e)
+  }catch(err){
+    console.log(err)
     res.redirect('/')
   }
 }

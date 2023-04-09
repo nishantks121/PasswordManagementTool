@@ -1,12 +1,12 @@
 <form action="/process-contact-form" method="post">
   <div class="mb-3">
     <label for="textinput1" class="form-label">Username</label>
-    <input name="username" type="text" class="form-control" id="textinput1" aria-describedby="emailHelp">
+    <input name="username" type="text" class="form-control" id="textinput1" aria-describedby="emailHelp" required>
     <div id="emailHelp" class="form-text">We'll never share your data with anyone else.</div>
   </div>
   <div class="mb-3">
     <label for="password" class="form-label">Password</label>
-    <input name="password" type="password" class="form-control" id="password">
+    <input name="password" type="password" class="form-control" id="password" required>
   </div>
     <div class="container text-center mt-5">
   <button type="submit" class="btn btn-success">Submit</button>

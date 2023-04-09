@@ -1,12 +1,12 @@
 const mongoose =require('mongoose')
 
 const productSchema=new mongoose.Schema({
-    name:String,
-    img:String,
+    name:{type:String,required:true},
+    img:{type:String,required:true},
     link:[
         {
-            label:String,
-            url:String
+            label:{type:String,required:true},
+            url:{type:String,required:true}
         }
     ]
 })
