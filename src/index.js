@@ -8,7 +8,9 @@ const Slider = require('./model/Slider')
 require('dotenv').config();
 const app = express()
 
-const PORT = process.env.PORT || 4500 // getting port value from env file 
+const PORT = process.env.PORT || 4500 // getting port value from env file
+const url=`mongodb+srv://nksdevelopers1:${process.env.password}@maincluster1.x0qw3py.mongodb.net/?retryWrites=true&w=majority` 
+// console.log(url)    // mongodb atles connection
 
 // to submit the data //
 app.use(express.json())
@@ -35,7 +37,7 @@ hbs.registerPartials('views/partials')
 
 // connection to database
 const main = async () => {
-    await mongoose.connect('mongodb://localhost:27017/password_management_tool').then(() => console.log("database connected!"))
+    await mongoose.connect(url).then(() => console.log("database connected!"))
 }
 main().catch((err) => console.log(err))
 

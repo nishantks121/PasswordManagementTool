@@ -2,8 +2,11 @@ const Navbar =require('../model/Navbar')
 const Inputbox =require('../model/Inputbox')
 const Slider =require('../model/Slider')
 
+const navbarId="643315ff35efd53a212a7633"
+const SliderId="6433177f2ffed307f02ce604"
+
 exports.home=async(req,res)=>{
-    const data= await Navbar.findOne({"_id":"64272ff9d7883d7665758e70"})
+    const data= await Navbar.findOne({"_id":navbarId})
     // console.log(data)
     res.render("home.hbs",{
         data:data
@@ -11,8 +14,8 @@ exports.home=async(req,res)=>{
 }
 
 exports.password=async(req,res)=>{
-    const data= await Navbar.findOne({"_id":"64272ff9d7883d7665758e70"})
-    const slide= await Slider.findOne({"_id":"6432bb47de2786aae1393b7a"})
+    const data= await Navbar.findOne({"_id":navbarId})
+    const slide= await Slider.findOne({"_id":SliderId})
     const tableData= await Inputbox.find({})
     // console.log(slide)
     res.render("password.hbs",{
@@ -23,7 +26,7 @@ exports.password=async(req,res)=>{
 }
 
 exports.about=async(req,res)=>{
-    const data=await Navbar.findOne({"_id":"64272ff9d7883d7665758e70"})
+    const data=await Navbar.findOne({"_id":navbarId})
     res.render("about.hbs",{
         data:data
     })
