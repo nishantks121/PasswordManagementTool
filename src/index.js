@@ -10,7 +10,7 @@ const app = express()
 
 const PORT = process.env.PORT || 4500 // getting port value from env file
 const url=`mongodb+srv://nishantkumarsharma121:${process.env.password}@maincluster.euwuwpu.mongodb.net/PMT_database` // mongodb atles connection
-// const url=`mongodb://localhost:27017/password_management_tool`
+// const url=`mongodb://0.0.0.0:27017/password_management_tool`
 // console.log(url)    
 
 // to submit the data //
@@ -65,7 +65,7 @@ main().catch((err) => console.log(err))
 //            }
 //     ]
 // })
-// result.save().then(()=>console.log("Data saved in database!"))
+// result.save().then(()=>console.log("Navbar Data saved in DB !"))
 
 
 // Slider data to db - images,title & subtitle, color
@@ -90,7 +90,7 @@ main().catch((err) => console.log(err))
 //     ]
 // })
 
-// result.save().then(() => console.log("slider data in db"))
+// result.save().then(() => console.log("slider data saved in DB !"))
 
 // server connection
 app.listen(PORT, () => {

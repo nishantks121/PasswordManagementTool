@@ -21,6 +21,8 @@
 npm i      // To install required dependencies
 npm start  // To start the server at 3000 port
 ```
+##### 3. Connect Your database  
+##### 4. Create .env file with PORT & PASSWORD 
 
 <!-- horizontal line-->
 *** 

@@ -5,8 +5,8 @@ const Slider =require('../model/Slider')
 const navbarId="643d9a69fed81493622b3031"   // mongodb atles
 const SliderId="643d9a900242fa7cda3a70ae"   // mongodb atles
 
-// const navbarId="64272ff9d7883d7665758e70"   // local database
-// const SliderId="6432bb47de2786aae1393b7a"   // local database
+// const navbarId="643dab154f4c1d241b27f017"   // local database
+// const SliderId="643dab1d790b1aa3cea67fed"   // local database
 
 exports.home=async(req,res)=>{
     const data= await Navbar.findOne({"_id":navbarId})
