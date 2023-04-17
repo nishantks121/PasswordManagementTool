@@ -9,8 +9,8 @@ require('dotenv').config();
 const app = express()
 
 const PORT = process.env.PORT || 4500 // getting port value from env file
-// const url=`mongodb+srv://nksdevelopers1:${process.env.password}@maincluster1.x0qw3py.mongodb.net/?retryWrites=true&w=majority` // mongodb atles connection
-const url=`mongodb://localhost:27017/password_management_tool`
+const url=`mongodb+srv://nishantkumarsharma121:${process.env.password}@maincluster.euwuwpu.mongodb.net/PMT_database` // mongodb atles connection
+// const url=`mongodb://localhost:27017/password_management_tool`
 // console.log(url)    
 
 // to submit the data //
@@ -45,7 +45,7 @@ main().catch((err) => console.log(err))
 // saving navbar dynamic data to database//
 // const result=new Navbar({
 //     name:"PASSWORD MANAGEMENT TOOL",
-//     img:"/static/images/github_transparent.png",
+//     img:"/static/images/logo1.png",  // mongodb atles logo1.png & local data logo2.png
 //     link:[
 //         {
 //            label:"HOME",
